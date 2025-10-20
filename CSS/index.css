@@ -15,7 +15,7 @@
 
 .about-header {
   width: 100%;
-  background-color: rgb(236, 0, 0);
+  background-color: rgb(38, 4, 190);
 }
 
 .about-header p {
@@ -29,7 +29,7 @@ header h2 span {
 
 header h2{
     font-size: 35px;
-    color: #fa0202;
+    color: rgb(38, 4, 190);;
     }
 
 .logo{
@@ -44,9 +44,10 @@ header h2{
 }
 
 .banner-ads {
-  width: 60%;
+  width: 68%;
   height: 100px;
   background-color: rgb(192, 192, 192);
+  background-image: url("../IMG/Captura\ de\ tela\ 2025-10-20\ 194635.png");
   position: relative;
 }
 
@@ -61,7 +62,7 @@ header h2{
 
 .menu-main {
   width: 100%;
-  background-color: rgb(236, 0, 0);
+  background-color: rgb(38, 4, 190);;
   padding: 8px;
 }
 
@@ -74,4 +75,17 @@ header h2{
 
 .menu-main a:hover {
   text-decoration: underline;
+}
+
+.noticias {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.noticias img {
+  width: 30%;
+  height: auto;
+  
 }
