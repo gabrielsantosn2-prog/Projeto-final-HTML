@@ -166,12 +166,12 @@ footer {
 }
 
 .relogio-canto {
-  position: fixed; /* Fixa o elemento na janela de visualização */
+  position:absolute; /* Fixa o elemento na janela de visualização */
   top: 15px; /* Distância do topo */
   right: 10px; /* Distância da direita */
   font-family: Arial, sans-serif; /* Opcional: define a fonte */
   font-size: 1.2em; /* Opcional: aumenta o tamanho da fonte */
-  color: #333; /* Opcional: muda a cor do texto */
+  color: #f8f7f7; /* Opcional: muda a cor do texto */
   background-color: #0e000009; /* Opcional: adiciona um fundo */
   padding: 5px 10px; /* Opcional: adiciona espaçamento interno */
   border-radius: 5px; /* Opcional: arredonda as bordas */
