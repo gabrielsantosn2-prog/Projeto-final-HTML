@@ -9,7 +9,7 @@
 .center {
   display: flex;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 3px auto;
   flex-wrap: wrap;
 }
 
@@ -41,25 +41,25 @@ header h2{
   padding: 40px 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.banner-ads {
+/*.banner-ads {
   width: 68%;
   height: 80px;
   background-color: rgb(192, 192, 192);
   background-image: url("../Anuncio/Captura\ de\ tela\ 2025-10-20\ 194635.png");
   position: relative;
-}
+}*/
 
-.banner-ads h2 {
+/*.banner-ads h2 {
   position: absolute;
   left: 10px;
   top: 10px;
   color: rgb(41, 41, 41);
   font-size: 15px;
   font-style: italic;
-}
+}*/
 
 .menu-main {
   width: 100%;
@@ -112,7 +112,7 @@ header h2{
 }
 
 .noticia-card {
-  background-color: #fff;
+  background-color: #ffffff02;
   width: 30%;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
@@ -146,7 +146,7 @@ header h2{
   display: block;
   text-align: center;
   background-color: rgb(38, 4, 190);
-  color: white;
+  color: rgba(255, 255, 255, 0.959);
   padding: 10px;
   text-decoration: none;
   border-radius: 0 0 10px 10px;
@@ -170,7 +170,7 @@ footer {
   top: 15px; /* Distância do topo */
   right: 10px; /* Distância da direita */
   font-family: Arial, sans-serif; /* Opcional: define a fonte */
-  font-size: 1.2em; /* Opcional: aumenta o tamanho da fonte */
+  font-size: 0.8em; /* Opcional: aumenta o tamanho da fonte */
   color: #f8f7f7; /* Opcional: muda a cor do texto */
   background-color: #0e000009; /* Opcional: adiciona um fundo */
   padding: 5px 10px; /* Opcional: adiciona espaçamento interno */
