@@ -14,3 +14,7 @@ setInterval(atualizarRelogio, 1000);
 
 // Executa a função uma vez ao carregar a página para evitar um atraso inicial
 atualizarRelogio();
+
+
+// fim do relogio
+

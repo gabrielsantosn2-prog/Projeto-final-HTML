@@ -9,7 +9,7 @@
 .center {
   display: flex;
   max-width: 100%;
-  margin: 3px auto;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
