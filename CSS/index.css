@@ -99,7 +99,7 @@ header h2{
 
 .noticias-container h2 {
   font-size: 28px;
-  color: rgb(38, 4, 190);
+  color: rgb(0, 0, 0);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -178,3 +178,82 @@ footer {
   z-index: 1000; /* Opcional: garante que fique acima de outros elementos */
 }
 
+/* Estilos do Carrossel */
+.carousel-container {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px; /* Ajuste a altura conforme sua necessidade */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+
+.slide-content h2, .slide-content p {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+    border-radius: 0 50px 50px 0;
+}
+
+.carousel-btn.next {
+    right: 10px;
+    border-radius: 50px 0 0 50px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: white;
+}

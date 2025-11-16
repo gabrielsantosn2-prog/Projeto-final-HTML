@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./IMG/icone grande sem fundo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/HTML/script.js">
 </head>
 
 <!-- Início do header -->
@@ -54,6 +55,42 @@
  <!-- SEÇÃO DE NOTÍCIAS -->
     <main class="noticias-container">
         <h2>Últimas Notícias</h2>
+ <div class="carousel-container">
+        <!-- Slides (novidades) -->
+        <div class="carousel-slide">
+            <div class="slide" style="background-image: url('IMG/carrossel_img/sport-posse-2.webp');">
+                <div class="slide-content">
+                    <h2>Bastidores: costura política avança em busca de um acordo para saída do presidente Yuri Romão do Sport</h2>
+                    <p>Mandatário rubro-negro se reuniu, nesta segunda-feira, com ex-presidente Luciano Bivar; uma nova rodada de conversas, com Gustavo Dubeux, está marcada; Yuri nega considerar saída</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('img/1_cxuotyuwqaacbdr-787540.jpg');">
+                <div class="slide-content">
+                    <h2>Celulares</h2>
+                    <p>Ofertas exclusivas</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('img/copia-de-fotos-enquadramento-capa.jpg');">
+                <div class="slide-content">
+                    <h2>Eletrodomésticos</h2>
+                    <p>Frete grátis</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <button id="prevBtn" class="carousel-btn prev">&#10094;</button>
+        <button id="nextBtn" class="carousel-btn next">&#10095;</button>
+
+        <!-- Indicadores de slide -->
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
         <div class="noticias-grid">
             <div class="noticia-card">
                 <img src="IMG/IMG-noticias/ti-joana-bezerra.avif" alt="metro do recife">

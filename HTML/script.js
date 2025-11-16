@@ -18,3 +18,62 @@ atualizarRelogio();
 
 // fim do relogio
 
+// carrossel de imagens
+document.addEventListener('DOMContentLoaded', () => {
+    const slideContainer = document.querySelector('.carousel-slide');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+
+    let currentIndex = 0;
+    let slideWidth = slides[0].clientWidth;
+
+    // Função para atualizar a posição do carrossel
+    function updateCarousel() {
+        slideContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        updateIndicators();
+    }
+
+    // Função para atualizar os indicadores
+    function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+            if (index === currentIndex) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
+
+    // Evento para o botão "Próximo"
+    nextBtn.addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    });
+
+    // Evento para o botão "Anterior"
+    prevBtn.addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = slides.length - 1;
+        }
+        updateCarousel();
+    });
+
+    // Evento para os indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    // Opcional: Auto-play
+    //setInterval(() => {
+     //   nextBtn.click();
+    //}, 5000); // Muda de slide a cada 5 segundos
+});
