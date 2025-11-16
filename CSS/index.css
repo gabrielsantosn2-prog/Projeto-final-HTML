@@ -15,7 +15,7 @@
 
 .about-header {
   width: 100%;
-  background-color: rgb(38, 4, 190);
+  background-color: #4176e1;
 }
 
 .about-header p {
@@ -29,7 +29,7 @@ header h2 span {
 
 header h2{
     font-size: 35px;
-    color: rgb(38, 4, 190);;
+    color: #4176e1;;
     }
 
 .logo-container {
@@ -131,7 +131,7 @@ header h2{
 }
 
 .noticia-card h3 {
-  color: rgb(38, 4, 190);
+  color: #4176e1;
   font-size: 18px;
   margin: 10px;
 }
@@ -145,7 +145,7 @@ header h2{
 .btn-leia {
   display: block;
   text-align: center;
-  background-color: rgb(38, 4, 190);
+  background-color: #4176e1;
   color: rgba(255, 255, 255, 0.959);
   padding: 10px;
   text-decoration: none;
@@ -158,11 +158,75 @@ header h2{
 
 /* Rodapé */
 footer {
-  background-color: rgb(38, 4, 190);
+  background-color: #4176e1;
   color: white;
   text-align: center;
   padding: 15px 0;
   margin-top: 40px;
+}
+
+/*Tamanho, largura e cor da barra lateral*/
+nav.menu{
+    width: 60px;
+    height: 100%;
+    background-color: #4176e1;
+/*Deixa o menu fixo*/
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    transition: .3s;
+}
+
+nav.menu:hover{
+    width: 300px;
+}
+
+.expandir{   
+    width: 100%;
+    padding-left: 10px;
+}
+
+/*Ícone*/
+/*.expandir > i{
+    font-size:24px;
+    color: snow;
+    cursor: pointer;
+}*/
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+/*Cor, estilo e alinhamento dos nomes e icones da barra lateral*/
+ul li.item a{
+    color:snow;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 50px;
+} 
+
+/*Distancia do icone do nome*/
+ul li.item a .link{
+    margin-left: 40px;
+}
+
+/*Tamanho do icone*/
+ul li.item a .icon > i{
+    font-size: 30px;
+}
+
+/*background de cor quando passa o mouse*/
+ul li.item:hover{
+    background-color: blue;
+}
+
+ul li.item{
+    transition: .3s;
 }
 
 .relogio-canto {
@@ -171,7 +235,7 @@ footer {
   right: 10px; /* Distância da direita */
   font-family: Arial, sans-serif; /* Opcional: define a fonte */
   font-size: 0.8em; /* Opcional: aumenta o tamanho da fonte */
-  color: #f8f7f7; /* Opcional: muda a cor do texto */
+  color: black; /* Opcional: muda a cor do texto */
   background-color: #0e000009; /* Opcional: adiciona um fundo */
   padding: 5px 10px; /* Opcional: adiciona espaçamento interno */
   border-radius: 5px; /* Opcional: arredonda as bordas */
