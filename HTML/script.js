@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Opcional: Auto-play
-    //setInterval(() => {
-     //   nextBtn.click();
-    //}, 5000); // Muda de slide a cada 5 segundos
+     // Opcional: Auto-play
+    setInterval(() => {
+    nextBtn.click();
+    }, 8000); // Muda de slide a cada 8 segundos
 });

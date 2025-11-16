@@ -70,7 +70,7 @@ header h2{
 .menu-main a {
   display: inline-block;
   margin: 10px;
-  color: rgb(255, 253, 253);
+  color: rgb#4176e1;
   text-decoration: none;
 }
 
@@ -99,7 +99,7 @@ header h2{
 
 .noticias-container h2 {
   font-size: 28px;
-  color: rgb(0, 0, 0);
+  color: rgb;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -250,6 +250,7 @@ ul li.item{
     margin: auto;
     overflow: hidden;
     border-radius: 8px;
+    margin-bottom: 40px;
 }
 
 .carousel-slide {
@@ -266,16 +267,25 @@ ul li.item{
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
-    padding: 0 50px;
+    padding: 20px 50px;
+}
+
+.slide-content {
+    /* Fundo escuro semi-transparente para o bloco de texto */
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 15px; 
+    border-radius: 8px;
+    /* Garante que o texto dentro seja branco */
+    color: whitesmoke; 
+    width: 100%; /* Ocupa a largura total para o padding */
 }
 
 .slide-content h2, .slide-content p {
-    background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
-    color: whitesmoke;
+    background-color: transparent;
+    padding: 0;
+    margin: 5px 0;
 }
 
 .carousel-btn {
