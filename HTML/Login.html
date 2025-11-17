@@ -44,16 +44,57 @@
 </head>
 <body>
     <!--Tela de Login-->
-    <div id="telinha">
+   <div id="telinha">
         <h1>Login</h1>
-        <input type="email" placeholder="E-mail" required>
-        <br><br>
-        <input type="password" placeholder="Senha" required>
-        <br><br>
-        <button>Entrar</button>
+        
+        <form onsubmit="return validarLogin(event)"> 
+            <input type="email" placeholder="E-mail" required id="loginEmail"> <br><br>
+            <input type="password" placeholder="Senha" required id="loginSenha"> <br><br>
+            <p id="erro-login" style="color: red; margin-top: 10px; font-size: 12px;"></p>
+            <br><br>
+            <button type="submit">Entrar</button> 
+        </form>
+        
         <br><br>
         <a href="Cadastro.html">Cadastre-se</a>
-
     </div>
+    
+    <script>
+        function validarLogin(event) {
+            const email = document.getElementById('loginEmail').value;
+            const senha = document.getElementById('loginSenha').value;
+            const erroLogin = document.getElementById('erro-login');
+
+            // 1. Tenta recuperar o usuário do localStorage usando o email como chave
+            const usuarioJSON = localStorage.getItem(email);
+
+            if (!usuarioJSON) {
+                // Usuário não encontrado
+                erroLogin.innerHTML = "E-mail não cadastrado.";
+                event.preventDefault();
+                return false;
+            }
+
+            // 2. Converte a string JSON de volta para um objeto JavaScript
+            const usuarioCadastrado = JSON.parse(usuarioJSON);
+
+            // 3. Verifica se a senha corresponde
+            if (usuarioCadastrado.senha === senha) {
+                // Login bem-sucedido
+                erroLogin.innerHTML = "";
+                alert('Login bem-sucedido! Redirecionando...');
+                
+                // Redireciona manualmente via JavaScript
+                window.location.href = "index2.html";
+                event.preventDefault(); // Impede o envio padrão do formulário
+                return true; 
+            } else {
+                // Senha incorreta
+                erroLogin.innerHTML = "Senha incorreta.";
+                event.preventDefault();
+                return false;
+            }
+        }
+    </script>   
 </body>
 </html>

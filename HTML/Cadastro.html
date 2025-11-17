@@ -44,20 +44,67 @@
 <body>
     <div id="telinhacad">
         <h1>Cadastro</h1>
-        <input type="text" placeholder="Nome" required>
-        <input type="text" placeholder="Sobrenome">
-        <br><br>
-        <input type="email" placeholder="E-mail" required>
-        <br><br>
-        <input type="password" placeholder="Senha" required>
-        <input type="password" placeholder="Confirmar senha" required>
-        <br><br>
-        <input type="date" placeholder="dd//mm//aa">
-        <input type="tel" placeholder="Número de Telefone">
-        <br><br>
-        <button>Cadastrar-se</button>
-
+        
+        <form onsubmit="return validarCadastro(event)" action="Login.html"> 
+            <input type="text" placeholder="Nome" required id="cadastroNome">
+            <input type="text" placeholder="Sobrenome" required id="cadastroSobrenome">
+            
+            <br><br>
+            <input type="email" placeholder="E-mail" required id="cadastroEmail"> <br><br>
+            
+            <input type="password" placeholder="Senha" required id="senha">
+            <input type="password" placeholder="Confirmar senha" required id="confirmarSenha">
+            <br>
+            <p id="erro-senha" style="color: red; margin-top: 10px; font-size: 12px;"></p> 
+            <br>
+            
+            <input type="date" placeholder="dd//mm//aa" required>
+            <input type="tel" placeholder="Número de Telefone" required>
+            <br><br>
+            <button type="submit">Cadastrar-se</button>
+        </form>
     </div>
-    
+        
+    <script>
+        function validarCadastro(event) {
+            // Os IDs agora estão no HTML, podemos acessá-los
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+            const email = document.getElementById('cadastroEmail').value; 
+            const erroSenha = document.getElementById('erro-senha');
+            let mensagemErro = "";
+            
+            // 1. REGRA: Senhas são iguais?
+            if (senha !== confirmarSenha) {
+                mensagemErro += "As senhas não coincidem. ";
+            }
+
+            // 2. REGRA: Complexidade da Senha (Mínimo 8 caracteres, Maiúscula, Minúscula, Número, Especial)
+            const regexComplexidade = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if (!regexComplexidade.test(senha)) {
+                mensagemErro += "A senha deve ter no mínimo 8 caracteres, incluindo letra maiúscula, minúscula, número e caractere especial (@$!%*?&).";
+            }
+
+            if (mensagemErro !== "") {
+                erroSenha.innerHTML = mensagemErro;
+                event.preventDefault(); // Impede o envio
+                return false;
+            } else {
+                // == PARTE NOVA: SALVANDO O CADASTRO NO LOCALSTORAGE ==
+                const novoUsuario = {
+                    email: email,
+                    senha: senha 
+                };
+
+                localStorage.setItem(email, JSON.stringify(novoUsuario));
+                
+                alert('Cadastro realizado com sucesso! Você será redirecionado para a área de login.');
+                
+                erroSenha.innerHTML = "";
+                return true; // Permite o envio para a action="Login.html"
+            }
+        }
+    </script>
 </body>
 </html>
