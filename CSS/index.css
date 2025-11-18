@@ -44,6 +44,27 @@ header h2{
   justify-content: center;
 }
 
+<<<<<<< HEAD
+=======
+
+.menu-main {
+  width: 100%;
+  background-color: rgb(38, 4, 190);;
+  padding: 8px;
+}
+
+.menu-main a {
+  display: inline-block;
+  margin: 10px;
+  color: rgb#4176e1;
+  text-decoration: none;
+}
+
+.menu-main a:hover {
+  text-decoration: underline;
+}
+
+>>>>>>> ede30001c8d9b70424ccedd92564ac1da98da864
 .noticias {
   width: 100%;
   margin-top: 20px;
@@ -147,6 +168,7 @@ nav.menu{
     left: 0%;
     overflow: hidden;
     transition: .3s;
+    z-index: 1001;
 }
 
 nav.menu:hover{
@@ -158,6 +180,10 @@ nav.menu:hover{
     padding-left: 10px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ede30001c8d9b70424ccedd92564ac1da98da864
 ul{
     height: 100%;
     list-style-type: none;
