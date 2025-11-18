@@ -44,40 +44,6 @@ header h2{
   justify-content: center;
 }
 
-/*.banner-ads {
-  width: 68%;
-  height: 80px;
-  background-color: rgb(192, 192, 192);
-  background-image: url("../Anuncio/Captura\ de\ tela\ 2025-10-20\ 194635.png");
-  position: relative;
-}*/
-
-/*.banner-ads h2 {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  color: rgb(41, 41, 41);
-  font-size: 15px;
-  font-style: italic;
-}*/
-
-.menu-main {
-  width: 100%;
-  background-color: rgb(38, 4, 190);;
-  padding: 8px;
-}
-
-.menu-main a {
-  display: inline-block;
-  margin: 10px;
-  color: rgb#4176e1;
-  text-decoration: none;
-}
-
-.menu-main a:hover {
-  text-decoration: underline;
-}
-
 .noticias {
   width: 100%;
   margin-top: 20px;
@@ -191,13 +157,6 @@ nav.menu:hover{
     width: 100%;
     padding-left: 10px;
 }
-
-/*Ícone*/
-/*.expandir > i{
-    font-size:24px;
-    color: snow;
-    cursor: pointer;
-}*/
 
 ul{
     height: 100%;
