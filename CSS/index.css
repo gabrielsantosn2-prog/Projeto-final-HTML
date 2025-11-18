@@ -165,6 +165,7 @@ nav.menu{
     left: 0%;
     overflow: hidden;
     transition: .3s;
+    z-index: 1001;
 }
 
 nav.menu:hover{
