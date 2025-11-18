@@ -44,22 +44,6 @@ header h2{
   justify-content: center;
 }
 
-/*.banner-ads {
-  width: 68%;
-  height: 80px;
-  background-color: rgb(192, 192, 192);
-  background-image: url("../Anuncio/Captura\ de\ tela\ 2025-10-20\ 194635.png");
-  position: relative;
-}*/
-
-/*.banner-ads h2 {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  color: rgb(41, 41, 41);
-  font-size: 15px;
-  font-style: italic;
-}*/
 
 .menu-main {
   width: 100%;
@@ -192,12 +176,6 @@ nav.menu:hover{
     padding-left: 10px;
 }
 
-/*Ícone*/
-/*.expandir > i{
-    font-size:24px;
-    color: snow;
-    cursor: pointer;
-}*/
 
 ul{
     height: 100%;
