@@ -50,6 +50,7 @@
   text-align: center;
 }
 
+/* Estilo padrão para o grid (desktop) */
 .noticias-grid {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +61,7 @@
 .noticia-card {
   background-color: rgb(255, 255, 255, 0.05);
   min-height: 450px;
-  width: 30%;
+  width: 30%; /* Três colunas */
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -275,4 +276,145 @@ ul li.item{
 
 .indicator.active {
     background-color: white;
+}
+
+
+/* 1. Telas de Tablets (Máximo 1024px) */
+@media (max-width: 1024px) {
+    /* Notícias */
+    .noticia-card {
+        width: 48%; /* Duas colunas */
+        min-height: 400px;
+    }
+    
+    /* Carrossel */
+    .slide {
+        height: 350px;
+        padding: 15px 30px;
+    }
+    
+    .slide-content h2 {
+        font-size: 20px;
+    }
+    
+    .slide-content p {
+        font-size: 13px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 2. Telas de Celular (Máximo 768px) */
+@media (max-width: 768px) {
+    
+    /* CABEÇALHO/MENU */
+    header {
+        padding-top: 10px;
+    }
+    
+    /* Ajusta o relógio para que não colida com o menu quando expandido */
+    .relogio-canto {
+        top: 80px;
+        right: 15px;
+        z-index: 100;
+    }
+    
+    /* Oculta o menu lateral e o coloca no topo (transformando em um menu "hamburguer" ou oculto) */
+    nav.menu {
+        width: 100%;
+        height: 60px; /* Altura da barra no topo */
+        position: static; /* Sai da posição fixa e fica no fluxo normal */
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav.menu:hover {
+        width: 100%; /* Desativa a expansão por hover */
+    }
+    
+    .expandir {
+        padding-left: 0;
+    }
+    
+    ul {
+        display: flex; /* Transforma em linha horizontal */
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    ul li.item a {
+        padding: 10px;
+        margin-bottom: 0;
+        line-height: normal;
+        flex-direction: column; /* Icone em cima do texto */
+        align-items: center;
+    }
+    
+    /* Esconde o texto dos links (mantendo só os ícones) */
+    ul li.item a .link {
+        margin-left: 0;
+        font-size: 12px; 
+        display: none; /* Opcional: Remover o texto dos links na barra de navegação */
+    }
+
+    /* Manter os ícones */
+    ul li.item a .icon > i {
+        font-size: 20px;
+    }
+    
+    /* NOTÍCIAS */
+    .noticias-grid {
+        justify-content: center; /* Centraliza no eixo X */
+    }
+    
+    .noticia-card {
+        width: 90%; /* Uma coluna em telas pequenas */
+        max-width: 350px;
+        min-height: auto;
+    }
+    
+    /* CARROSSEL */
+    .carousel-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slide {
+        height: 300px;
+        padding: 10px 20px;
+    }
+
+    .slide-content {
+        padding: 10px;
+    }
+
+    .slide-content h2 {
+        font-size: 16px;
+    }
+
+    .slide-content p {
+        font-size: 11px;
+    }
+    
+    .carousel-btn {
+        padding: 10px; /* Botões menores */
+    }
+    
+    .carousel-btn.prev {
+        left: 5px;
+    }
+
+    .carousel-btn.next {
+        right: 5px;
+    }
+    
+    /* RODAPÉ */
+    footer p {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
 }
