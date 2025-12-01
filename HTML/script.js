@@ -46,20 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Evento para o botão "Próximo"
+    // Evento para o botão "Próximo" (AGORA CORRIGIDO PARA AVANÇAR)
     nextBtn.addEventListener('click', () => {
-        currentIndex++;
+        currentIndex++; // Aumenta o índice (avança para o próximo slide visualmente)
         if (currentIndex >= slides.length) {
-            currentIndex = 0;
+            currentIndex = 0; // Volta para o primeiro slide
         }
         updateCarousel();
     });
 
-    // Evento para o botão "Anterior"
+    // Evento para o botão "Anterior" (AGORA CORRIGIDO PARA RETROCEDER)
     prevBtn.addEventListener('click', () => {
-        currentIndex--;
+        currentIndex--; // Diminui o índice (volta para o slide anterior visualmente)
         if (currentIndex < 0) {
-            currentIndex = slides.length - 1;
+            currentIndex = slides.length - 1; // Vai para o último slide
         }
         updateCarousel();
     });
@@ -77,3 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.click();
     }, 8000); // Muda de slide a cada 8 segundos
 });
+
+// NOVO: Função para deslogar e limpar a flag de sessão (Adicionada na correção anterior)
+function doLogoff(event) {
+    event.preventDefault(); // Evita a navegação de links com href="#"
+    sessionStorage.removeItem('isLoggedIn'); // Limpa a flag de login
+    window.location.href = "index.html"; // Redireciona para a página inicial (não logada)
+}

@@ -43,8 +43,7 @@
     </style>
 </head>
 <body>
-    <!--Tela de Login-->
-   <div id="telinha">
+    <div id="telinha">
         <h1>Login</h1>
         
         <form onsubmit="return validarLogin(event)"> 
@@ -61,6 +60,9 @@
     
     <script>
         function validarLogin(event) {
+            // Garante que o envio padrão do formulário seja sempre cancelado
+            event.preventDefault(); 
+            
             const email = document.getElementById('loginEmail').value;
             const senha = document.getElementById('loginSenha').value;
             const erroLogin = document.getElementById('erro-login');
@@ -71,7 +73,6 @@
             if (!usuarioJSON) {
                 // Usuário não encontrado
                 erroLogin.innerHTML = "E-mail não cadastrado.";
-                event.preventDefault();
                 return false;
             }
 
@@ -84,14 +85,15 @@
                 erroLogin.innerHTML = "";
                 alert('Login bem-sucedido! Redirecionando...');
                 
+                // NOVO: Define a flag de sessão
+                sessionStorage.setItem('isLoggedIn', 'true');
+                
                 // Redireciona manualmente via JavaScript
                 window.location.href = "index2.html";
-                event.preventDefault(); // Impede o envio padrão do formulário
                 return true; 
             } else {
                 // Senha incorreta
                 erroLogin.innerHTML = "Senha incorreta.";
-                event.preventDefault();
                 return false;
             }
         }
